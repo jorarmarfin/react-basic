@@ -1,15 +1,7 @@
 import React from 'react';
-
-const PrimeraApp = ()=>{
-    const saludo = 'Hola mundo const';
-    const numeros = 123;
-    const decimal = 123.123;
-    const boleano = true; //No lo mostro
-    const arreglo = [1,2,3,4]; //Lo mostro concatenado 1234
-    const persona = {
-        nombre:'Luis',
-        edad:42
-    }//JSON.stringify(persona)
+import PropTypes from 'prop-types'
+const PrimeraApp = ({saludo})=>{
+    
 
     return (
         <>
@@ -17,6 +9,10 @@ const PrimeraApp = ()=>{
             <p>a ver si se puede</p>
         </>
     );
+}
+
+PrimeraApp.prototypes = { 
+    saludo : PropTypes.string.isRequired
 }
 
 export default PrimeraApp;
